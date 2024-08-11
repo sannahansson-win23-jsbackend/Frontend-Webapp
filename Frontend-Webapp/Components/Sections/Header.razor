@@ -1,0 +1,38 @@
+﻿<header>
+    <div class="container">
+    <a id="logo" href="" Match="NavLinkMatch.All">
+        <img src="/images/images/logo/solid.svg" alt="silicon logo" />
+    </a>
+   <nav class="nav">
+            <NavLink class="menu-link" href="" Match="NavLinkMatch.All"> Overview </NavLink>
+            <NavLink class="menu-link" href="/#features">Features</NavLink>
+
+           <AuthorizeView>
+               <Authorized>
+                    <NavLink class="menu-link" href="/courses">Courses</NavLink>
+               </Authorized>             
+           </AuthorizeView>
+
+            <NavLink class="menu-link" href="/contacts">Contact</NavLink>
+   </nav>
+    <div class="switch">
+
+            <AuthorizeView>
+                <Authorized>
+                    <div class="profile">
+                        <div >
+                            <a href="Account/details">
+                                <img src="/images/images/icons/icon_comments.svg" />
+                            </a>
+
+                        </div>
+                    </div>
+                </Authorized>
+              <NotAuthorized>
+                  <a class=" btn btn-gray" href="/signup" > <i class="fa-regular fa-arrow-right-to-bracket"></i> Sign Up </a>
+                    <a class="btn btn-theme" href="/signin"> <i class="fa-regular fa-user"></i> Sign In </a>
+              </NotAuthorized>
+            </AuthorizeView>
+   </div>
+    </div>
+</header>
