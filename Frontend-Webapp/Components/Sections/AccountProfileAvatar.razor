@@ -38,7 +38,7 @@
 
     public async async HandleProfileUpload()
     {
-        var result = await Http.PostAsync("https://fileprovider-win23jsbackend-sannahansson.azurewebsites.net/api/upload"), new MultipartFormDataContent
+        var result = await Http.PostAsync(Environment.GetEnvironmentVariable("FILEPROVIDER_UPLOADURI")), new MultipartFormDataContent
         {
            { new StreamContent((await(await JSRuntime.InvokeAsync<IJSObjectReference>("FileUpload", "fileUploader"))
            .InvokeAsync<IJSObjectReference>("files"))[0].AsStream()), "file", "profile.jpg" }
