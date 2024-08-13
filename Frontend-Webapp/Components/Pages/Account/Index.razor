@@ -44,11 +44,11 @@
 
     protected override async Task OnInitializedAsync()
     {
-        user = await UserManager.GetUserAsync(HttpContext.User) ?? null!;
-        username = await UserManager.GetUserNameAsync(user);
-        phoneNumber = await UserManager.GetPhoneNumberAsync(user);
+        // user = await UserManager.GetUserAsync(HttpContext.User) ?? null!;
+        // username = await UserManager.GetUserNameAsync(user);
+        // phoneNumber = await UserManager.GetPhoneNumberAsync(user);
 
-        Input.PhoneNumber ??= phoneNumber;
+        // Input.PhoneNumber ??= phoneNumber;
     }
 
     private async Task OnValidSubmitAsync()

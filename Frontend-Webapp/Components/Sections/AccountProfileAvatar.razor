@@ -42,6 +42,6 @@
         {
            { new StreamContent((await(await JSRuntime.InvokeAsync<IJSObjectReference>("FileUpload", "fileUploader"))
            .InvokeAsync<IJSObjectReference>("files"))[0].AsStream()), "file", "profile.jpg" }
-    }); ")
+    });
     }
 }
